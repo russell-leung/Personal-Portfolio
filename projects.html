@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Russell Leung: Projects</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<main class="projects">
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="education.html">Education</a>
+		<a href="experience.html">Experience</a>
+		<a href="projects.html">Projects</a>
+		<div onclick="dropdownToggle()" class="dropbtn">
+			Contact Me
+      <a id="email" class="dropdown-content" href="mailto:ruleung05@student.haverhill-ps.org" target="_blank">Email</a>
+    </div>
+	</nav>
+
+	<body>
+
+		<h1>Python</h1>
+		<div id="python">
+
+			<div id="hangman">
+				<div class="text">
+					<h2>Hangman</h2>
+					<p>Hangman is a game where a player attempts to guess the letters of a word. However, everytime they guess incorrectly
+						a part of the drawing is done. The player loses when the drawing of the hangman is complete. Using Python, I recreated
+						a text-based Hangman game with more than 800 possible words.</p>
+
+					<a href="https://github.com/russell-leung/hangman" target="_blank">Source Code</a>
+				</div>
+        <a href="https://replit.com/@RussellLeung/Hangman#main.py" target="_blank" class="img">
+          <img src="img/hangman.png" alt="picture of hangman game">
+        </a>
+			</div>
+
+			<div id="war">
+        <div class="text">
+          <h2>War Simulation</h2>
+          <p>War is a game in which two players utalize a deck of 52 cards, the deck is randomly suffled and put into two seperate decks of 26, one for each user. With the highet card being the ace and the lowest card being the 2,the uses simotaniously flip the first card in their decks and the player with the highest value card takes both player's cards. If the users both flip a card of the same value then a "war" will start. Both users will place 3 cards face dow and flip their 4th card, the player with the highest value card will take all the cards. If the users again place down the same value card, another war will start. The game continues until one player has 0 cards left in their deck.</p>
+          <a href="https://github.com/russell-leung/war" target="_blank">Source Code</a>
+        </div>
+				<a href="https://replit.com/@RussellLeung/War-Simulation#main.py" target="_blank" class="img">
+					<img src="img/war-simulation.png" alt="picture of the war simulation">
+        </a>
+			</div>
+
+			<div id="bank">
+        <div class="text">
+          <h2>Bank + GUI</h2>
+          <p>
+            An online banking application made via Tkinter which utalizes a sequal database to make a fully functioning ATM/bank graphical user interface. Users have the ability to create and delete their accounts, deposit and withdraw money, and check their balance. There is also an Admin account that has the capabilties to alter a user's information (username: ADMIN, password: 0000).
+          </p>
+          <a href="https://github.com/russell-leung/ATM" target="_blank">Source Code</a>
+        </div>
+				<a href="https://replit.com/@RussellLeung/ATM-GUI#main.py" target="_blank" class="img">
+					<img src="img/bank.png" alt="picture of the bank gui">
+        </a>
+			</div>
+
+		</div>
+
+		<h1>HTML, CSS, JavaScript</h1>
+		<div id="html-css-js">
+      <div id="cookie-clicker">
+				<div class="text">
+					<h2>Cookie Clicker</h2>
+					<p>
+            A remake of the infamous cookie clicker game where a user clicks the cookie to gain cookies then buys upgrade to increase the amount of cookies they receive. The goal: get as many cookies as possible.
+          </p>
+					<a href="https://replit.com/@RussellLeung/Cookie-Clicker#index.html" target="_blank">Source Code</a>
+				</div>
+				<a href="https://replit.com/@RussellLeung/Cookie-Clicker" target="_blank" class="img">
+					<img src="img/cookie-clicker.png" alt="picture of cookie clicker">
+        </a>
+			</div>
+
+      <div id="covid">
+        <div class="text">
+					<h2>Covid-19 Tribute Page</h2>
+					<p>
+            A tribute page created towards the beginning of the Covid-19 pandemic that contains vital information regarding the virus, its symptoms, its treatments, and more.
+          </p>
+					<a href="https://replit.com/@RussellLeung/Covid-Website#index.html" target="_blank">Source Code</a>
+				</div>
+				<a href="https://replit.com/@RussellLeung/Covid-Website#index.html" target="_blank" class="img">
+					<img src="img/covid.png" alt="picture of covid tribute page">
+        </a>
+      </div>
+
+		</div>
+
+<!-- Coming Soon -->
+    <!-- <h1>Java</h1>
+		<div id="java"></div> -->
+
+		<script src="script.js"></script>
+	</body>
+
+</main>
+
+</html>
