@@ -2,84 +2,114 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Russell Leung: Education</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Russell Leung: Education</title>
+  <link href="style.css" rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
 </head>
 
 <main class="education">
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="education.html">Education</a>
-		<a href="experience.html">Experience</a>
-		<a href="projects.html">Projects</a>
-		<div onclick="dropdownToggle()" class="dropbtn">
-			Contact Me
-      <a id="email" class="dropdown-content" href="mailto:ruleung05@student.haverhill-ps.org" target="_blank">Email</a>
+
+  <nav class="desktop">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact-me.html">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile">
+    <ul>
+      <li class="mobile-dropbtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="mobile_dropdown_content">
+          <a href="index.html">Home</a>
+          <a href="education.html">Education</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact-me.html">Contact Me</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <body>
+
+    <h1>Haverhill High School</h1>
+
+    <div class="container">
+      <div id="GPA">
+        <h2>Grade Point Average (GPA)</h2>
+        <ul>
+          <li>Unweighted GPA: 3.9</li>
+          <li>Credits: 19</li>
+          <li>Class Rank: x Out Of 554</li>
+
+          <!-- need to put link to picture of transcript into here when I get an updated transcript -->
+          <li src="img/transcript.jpg">Transcript</li>
+        </ul>
+      </div>
+
+      <div id="CVTE">
+        <h2>CVTE Programming and Web Development</h2>
+        <ul>
+          <li>Principles of IT</li>
+          <li>Introduction to Programming</li>
+          <li>10th Grade Programming and Web Development</li>
+          <li>11th Grade Programming and Web Development</li>
+        </ul>
+      </div>
+
+      <div id="Classical">
+        <h2>Classical Academy</h2>
+        <ul>
+          <li>Latin I, Latin II, Latin III Accelerated</li>
+          <li>Classical Perspective-Literature</li>
+          <li>Classical Perspective-Studio</li>
+        </ul>
+      </div>
+
+      <div id="EC">
+        <h2 id="ECtitle">Early College / Dual Enrollment</h2>
+        <ul>
+          <li>English Composition 1 & 2</li>
+          <li>Pre-Calculus</li>
+          <li>General Chemistry 1</li>
+          <li>Calculus 1</li>
+        </ul>
+      </div>
+
+      <!-- Maybe make this into two columns each with its own list but need to make font smaller -->
+      <div id="AP">
+        <h2>Advanced Placement (AP) Courses</h2>
+
+        <div id="ap-container" class="ap-list">
+          <div class="ap-list" id="l1">
+            <ul>
+              <li>AP Environmental Science (4)</li>
+              <li>AP Physics</li>
+              <li>AP Computer Science A</li>
+            </ul>
+          </div>
+
+          <div class="ap-list" id="l2">
+            <ul>
+              <li>AP European History (5)</li>
+              <li>AP United States History</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-	</nav>
 
-	<body>
-
-		<h1>Haverhill High School</h1>
-
-		<div class="container">
-			<div id="GPA">
-				<h2>Grade Point Average (GPA)</h2>
-				<ul>
-					<li>Unweighted GPA: 3.87</li>
-					<li>Credits: 15.5</li>
-
-					<!-- need to put link to picture of transcript into here when I get an updated transcript -->
-					<li src="img/transcript.jpg">Transcript</li>
-				</ul>
-			</div>
-
-			<div id="CVTE">
-				<h2>CVTE Programming and Web Development</h2>
-				<ul>
-					<li>Principles of IT</li>
-					<li>Introduction to Programming</li>
-					<li>10th Grade Programming and Web Development</li>
-					<li>11th Grade Programming and Web Development</li>
-				</ul>
-			</div>
-
-			<div id="Classical">
-				<h2>Classical Academy</h2>
-				<ul>
-					<li>Latin I, Latin II, Latin III Accelerated</li>
-					<li>Classical Perspective-Literature</li>
-					<li>Classical Perspective-Studio</li>
-				</ul>
-			</div>
-
-			<!-- Maybe make this into two columns each with its own list but need to make font smaller -->
-			<div id="AP">
-				<h2>Advanced Placement (AP) Courses</h2>
-				<ul>
-					<li>AP European History (5)</li>
-					<li>AP Environmental Science (4)</li>
-					<li>AP United States History</li>
-					<li>AP Physics</li>
-					<li>AP Computer Science A</li>
-				</ul>
-
-			</div>
-
-			<div id="EC">
-				<h2>Early College / Dual Enrollment</h2>
-				<ul>
-					<li>English Composition 1</li>
-					<li>Pre-Calculus</li>
-				</ul>
-			</div>
-
-		</div>
-
-		<script src="script.js"></script>
-	</body>
+    <script src="script.js"></script>
+  </body>
 
 </main>
 

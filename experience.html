@@ -2,57 +2,74 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Russell Leung: Experience</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Russell Leung: Experience</title>
+  <link href="style.css" rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
 </head>
 
 <main class="experience">
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="education.html">Education</a>
-		<a href="experience.html">Experience</a>
-		<a href="projects.html">Projects</a>
-		<div onclick="dropdownToggle()" class="dropbtn">
-			Contact Me
-      <a id="email" class="dropdown-content" href="mailto:ruleung05@student.haverhill-ps.org" target="_blank">Email</a>
-    </div>
-	</nav>
 
-	<body>
+  <nav class="desktop">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact-me.html">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile">
+    <ul>
+      <li class="mobile-dropbtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="mobile_dropdown_content">
+          <a href="index.html">Home</a>
+          <a href="education.html">Education</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact-me.html">Contact Me</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <body>
 
     <h1>Work Experience</h1>
 
     <div id="work-experience">
-		<div id="HydraCor">
-			<h2 id="title">
-				HydraCor, LLC Internship
-			</h2>
-			<ul id="list">
-				<li>Entering data into HydraCor’s database</li>
-				<li>Updating and maintaining data in HydraCor’s system</li>
-				<li>Discovering and correcting data in HydraCor’s system</li>
-				<li>Working with Smartsheets and Google Sheets</li>
-			</ul>
-		</div>
+      <div id="HydraCor">
+        <h2 id="title">
+          HydraCor, LLC Internship
+        </h2>
+        <ul id="list">
+          <li>Manually entered data correctly and accurately</li>
+          <li>Reviewed collected data for accuracy and correctness</li>
+          <li>Prepared and formated data for use</li>
+          <li>Worked with Smartsheets and Google Sheets</li>
+        </ul>
+      </div>
 
-		<div id="STEM">
-			<h2 id="title">
-				STEM Career Awareness Internship
-			</h2>
-			<ul id="list">
-				<li>Taught middle and elementary scholars about additive manufacturing</li>
-				<li>Built 3D printing lessons plans</li>
-				<li>Presented 3D printing lessons to scholars</li>
-				<li>Completed Career Readiness Course and Seminar (MassHire YouthWorks)</li>
-			</ul>
-		</div>
+      <div id="STEM">
+        <h2 id="title">
+          STEM Career Awareness Internship
+        </h2>
+        <ul id="list">
+          <li>Taught middle and elementary scholars about additive manufacturing</li>
+          <li>Built 3D printing lessons plans</li>
+          <li>Presented 3D printing lessons to scholars</li>
+          <li>Completed Career Readiness Course and Seminar (MassHire YouthWorks)</li>
+        </ul>
+      </div>
     </div>
 
 
-		<script src="script.js"></script>
-	</body>
+    <script src="script.js"></script>
+  </body>
 
 </main>
 

@@ -1,11 +1,15 @@
-/* change font-family */
+/* {
+  box-sizing: border-box;
+} */
+
+html {
+  font-family: Arvo;
+}
 
 body {
   height: 100%;
-  background-color: #19647E;
-  /* background-color: white; */
+  background-color: #2F2FA2;
   margin: 0;
-  /* color: #190933; */
   color: white;
   overflow-x: hidden;
 }
@@ -21,41 +25,61 @@ nav {
   display: flex;
   align-items: row;
   justify-content: space-between;
-  background-color: #A0D2DB;
+  background-color: #F64C72;
 }
 
-nav a, nav div {
+nav ul, nav li{
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+nav.desktop a, 
+nav.desktop div {
   text-decoration: none;
-  width: 20%;
+  width: 100%;
   padding: 2vw 0 2vw 0;
   text-align: center;
-  color: #190933;
+  color: white;
   font-size: 2vw;
 }
 
-nav a:hover, nav div:hover {
+nav.desktop ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav.desktop a:hover, 
+nav.desktop div:hover {
   cursor: pointer;
-  background-color: #BEE7E8;
+  background-color: #C43C5b;
 }
 
-.dropbtn {
-  position: relative;
-  display: inline-block;
+nav.desktop div a:hover {
+  background-color: #8080da;
 }
 
-.dropdown-content {
+nav.desktop div a {
+  margin-top: 2vw;
+  width: 20%;
+  justify-content: center;
+}
+
+.desktop-dropdown-content {
   display: none;
   position: absolute;
-  background-color: #A0D2DB;
+  background-color: #5353cd;
   min-width: 20vw;
   padding: 1vw 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.show {
-  display: flex;
-  justify-content: center;
+.mobile {
+  display: none;
 }
 
 /* index.html */
@@ -105,7 +129,7 @@ nav a:hover, nav div:hover {
   font-size: 2vw;
   border: 1px solid white;
   border-radius: 50%;
-  background-color: #2E4057;
+  background-color: #202071;
 }
 
 @keyframes fname {
@@ -139,12 +163,12 @@ nav a:hover, nav div:hover {
   justify-content: space-evenly;
 }
 
-.education .container div {
+.education .container div:not(.ap-list) {
   width: 45%;
-  height: 15vw;
+  height: 16vw;
   border: 1px solid white;
   margin: 1.25vw;
-  background-color: #2E4057;
+  background-color: #202071;
   border-radius: 2%;
 }
 
@@ -158,6 +182,23 @@ nav a:hover, nav div:hover {
 .education .container div ul {
   font-size: 1.75vw;
   padding-left: 5vw;
+}
+
+.education .container #AP {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.education .container #AP div {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.education.container #AP div ul {
+  padding: 0;
 }
 
 /* Experience.html */
@@ -176,7 +217,7 @@ nav a:hover, nav div:hover {
   padding: 0;
   width: 100%;
   justify-content: space-evenly;
-  background-color: #2E4057;
+  background-color: #202071;
   border: 1px solid white;
   border-radius: 2%;
 }
@@ -232,11 +273,11 @@ nav a:hover, nav div:hover {
   padding: 0 40% 0 40%;
   height: 20%;
   border-radius: 2%;
-  background-color: #2E4057;
+  background-color: #202071;
 }
 
 .projects .text a:hover {
-  background-color: #A0D2DB;
+  background-color: #101038;
 }
 
 .projects .img {
@@ -245,7 +286,10 @@ nav a:hover, nav div:hover {
 
 .projects .img:hover {
   border: .25vw solid rgba(0, 0, 0, 1);
+}
 
+.projects img {
+  max-height: 35vw;
 }
 
 .projects #python, .projects #html-css-js {
@@ -278,4 +322,239 @@ nav a:hover, nav div:hover {
 .projects #python #war .text h2 {
   margin-top: 1%;
   margin-bottom: 1%;
+}
+
+/* Contact-Me.html */
+
+.contact-me h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-me #contact-me-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me div.contact-me-form {
+  width: 60%;
+  margin: 1% 18%;
+  padding: 1vw 2%;
+  border: 1px solid white;
+  border-radius: 3%;
+  background-color: #5353cd;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1vw;
+}
+
+.contact-me input[type=text], .contact-me input[type=email] {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: #5353cd;
+  width: 98%;
+  padding: 1vw 0;
+  margin: .5vw 0;
+  color: white;
+}
+
+.contact-me input[type=text]:focus, .contact-me input[type=email]:focus {
+  border: 2px solid white;
+}
+
+.contact-me #message {
+  resize: none;
+  width: 98%;
+  border: 2px solid white;
+  background-color: #5353cd;
+}
+
+.contact-me label {
+  font-size: 2vw;
+}
+
+.contact-me #contact-form-submit-btn {
+  width: 40%;
+  margin: 0 30%;
+  padding: 2% 0;
+}
+
+@media only screen and (max-width: 680px) {
+
+/*   
+                          TO DO
+
+
+  when you open contact form, go to a new page, when you submit, close the window
+
+  textarea focus is broken
+  
+  add height media query: look at these media queries: https://replit.com/@RussellLeung/62-Media-Queries#style.css
+
+  add copyright thing at bottom
+
+  make a form: under contact me put an option for a form that is an a tag and links the user to a new page of html (target="_blank") with a html form on it customized
+
+  need a media query for height as well as width: if height is too large, move the title russell leung + catchphrase down by a percent of the screen height
+  */
+
+/* Nav Bar <-- place title of page in the center of title bar so viewers know what they are looking at
+
+/* https://stackoverflow.com/questions/44207293/adding-a-drop-down-menu-to-three-line-menu-icon */
+  
+  nav.desktop {
+    display: none;
+  }
+
+  nav.mobile {
+    display: flex;
+    height: 15%;
+  }
+
+  nav.mobile ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  nav.mobile li{
+    display: flex;
+    width: 5vw;
+    margin-right: 6vw;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  nav.mobile .bar1, .bar2, .bar3 {
+    display: flex;
+    justify-content: center;
+    width: 5vw;
+    height: 1vw;
+    margin: .1vw;
+    border-radius: 10%;
+    padding: 0;
+    background-color: white;
+  }
+
+  nav.mobile .mobile_dropdown_content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 6vw;
+    right: 3vw;
+    z-index: 1;
+  }
+
+  nav.mobile .mobile-dropbtn:hover{
+    cursor: pointer;
+  }
+  
+  nav.mobile .mobile_dropdown_content a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 2vw 1vw 2vw 1vw;
+    background-color: #5353CD;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100%;
+  }
+
+  nav.mobile .mobile_dropdown_content a:hover{
+    background-color: #8080da;
+  }
+
+
+  .education .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education .container div {
+    width: 80% !important;
+  }
+
+  .education #work-experience {
+    display: flex;
+    align-items: center;
+  }
+
+  #HydraCor, #STEM {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 5% 10%;
+  }
+
+  #HydraCor #title, #STEM #title {
+    width: 100%;
+    padding-left: 5vw;
+  }
+
+  .projects .text, .projects .img {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 2.5%;
+  }
+
+  .projects img {
+    max-height: 55vw;
+  }
+
+  .projects .text {
+    height: 37vw;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .projects #hangman, #war, #bank, #cookie-clicker, #covid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+
+  .projects #python #war, .projects #html-css-js #cookie-clicker {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects #python #war .text p {
+    font-size: 15px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  .projects #python #war .text {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .text {
+    height: 50vw;
+    margin-bottom: 20vw;
+  }
+
+  .projects .img {
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .projects .text a {
+    font-size: 13px;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+
+  #cookie-clicker .text, #covid .text {
+    margin-bottom: 5vw;
+  }
 }
